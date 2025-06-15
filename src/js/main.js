@@ -24,7 +24,7 @@ link2.addEventListener("click", (event) => {
 
 link3.addEventListener("click", (event) => {
   event.preventDefault();
-  scrollToElement(".column");
+  scrollToElement(".footer");
 });
 
 link4.addEventListener("click", (event) => {
@@ -39,7 +39,7 @@ link5.addEventListener("click", (event) => {
 
 link6.addEventListener("click", (event) => {
   event.preventDefault();
-  scrollToElement("nav");
+  scrollToElement(".header");
 });
 
 // PARTICULAS
