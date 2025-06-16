@@ -43,7 +43,7 @@ body {
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 5rem 2rem;
+  padding: 2rem 2rem;
 }
 
 section .header {
@@ -112,15 +112,18 @@ nav {
   max-width: 120px;
 }
 
+/* Busca esta regla existente */
 .nav-links {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem; /* Reduce el gap para compensar el padding */
 }
 
+/* Busca esta regla existente */
 .link a {
   position: relative;
+  padding: 0.25rem 1rem; /* Modifica esta línea */
   padding-bottom: 0.75rem;
   color: var(--text-light);
 }
@@ -143,7 +146,7 @@ nav {
 /* --- HEADER --- */
 header.container {
   padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -196,7 +199,9 @@ header .image img {
 }
 
 /* --- SHARED CARD STYLES --- */
-.card, .benefit-card, .nfc-feature {
+.card,
+.benefit-card,
+.nfc-feature {
   background-color: var(--bg-card);
   border: 2px solid transparent;
   border-radius: var(--border-radius-md);
@@ -204,13 +209,16 @@ header .image img {
   padding: 1.5rem;
 }
 
-.card:hover, .benefit-card:hover, .nfc-feature:hover {
+.card:hover,
+.benefit-card:hover,
+.nfc-feature:hover {
   background-color: var(--bg-card-hover);
   border-color: var(--text-light);
   transform: translateY(-5px);
 }
 
-.benefit-card:hover, .nfc-feature:hover {
+.benefit-card:hover,
+.nfc-feature:hover {
   border-color: var(--primary-color);
 }
 
@@ -303,8 +311,13 @@ header .image img {
   align-items: center;
 }
 
-.paquete-web-intro .content { flex: 1; }
-.paquete-web-intro .video-container { flex: 1; min-width: 50%; }
+.paquete-web-intro .content {
+  flex: 1;
+}
+.paquete-web-intro .video-container {
+  flex: 1;
+  min-width: 50%;
+}
 
 .video-container {
   position: relative;
@@ -314,10 +327,14 @@ header .image img {
   background-color: var(--bg-card);
 }
 
-.video-container iframe {
-  width: 100%;
-  height: 315px;
+/* Global iframe style */
+iframe {
   border: none;
+  width: 100%;
+}
+
+.video-container iframe {
+  height: 315px;
 }
 
 .features-grid {
@@ -349,7 +366,10 @@ header .image img {
   text-align: center;
 }
 
-.feature-item p { font-size: 0.95rem; margin: 0; }
+.feature-item p {
+  font-size: 0.95rem;
+  margin: 0;
+}
 
 /* --- BENEFITS SECTION --- */
 .benefits-grid {
@@ -393,19 +413,58 @@ header .image img {
 }
 
 /* --- NFC CARD SECTION --- */
-.nfc-section { margin-top: 2rem; }
-.nfc-container { display: flex; gap: 2rem; margin-top: 3rem; align-items: flex-start; }
-.nfc-column { flex: 1; display: flex; flex-direction: column; }
+.nfc-section {
+  margin-top: 2rem;
+}
+.nfc-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: flex-start;
+}
+.nfc-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
-.benefits-column { gap: 1.5rem; justify-content: center; }
-.video-column { justify-content: flex-start; }
-.use-cases-column { gap: 2rem; }
+.benefits-column {
+  gap: 1.5rem;
+  justify-content: center;
+}
+.video-column {
+  justify-content: flex-start;
+}
+.use-cases-column {
+  gap: 2rem;
+}
 
-.nfc-feature i { font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem; }
-.nfc-feature h4 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-.nfc-feature p { color: var(--text-dark); font-size: 0.95rem; line-height: 1.6; }
+.nfc-feature i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+.nfc-feature h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.nfc-feature p {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
-.nfc-cta { margin-top: 1.5rem; text-align: center; }
+.nfc-cta {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Agrega este nuevo bloque de código */
+.nfc-video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Asegura que el video sea responsivo */
+  border-radius: var(--border-radius-sm);
+}
 
 .use-cases-title {
   font-size: 1.3rem;
@@ -424,14 +483,39 @@ header .image img {
   background-color: var(--primary-color);
 }
 
-.use-cases-list { list-style: none; }
-.use-cases-list li { display: flex; gap: 0.5rem; margin-bottom: 0.8rem; font-size: 0.95rem; align-items: flex-start; }
-.use-cases-list i { color: var(--primary-color); font-size: 1.1rem; margin-top: 0.2rem; }
+.use-cases-list {
+  list-style: none;
+}
+.use-cases-list li {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  align-items: flex-start;
+}
+.use-cases-list i {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+}
 
-.tech-specs { background-color: rgba(2, 138, 15, 0.1); padding: 1.5rem; border-radius: var(--border-radius-md); }
-.specs-title { font-size: 1.3rem; margin-bottom: 1rem; }
-.tech-specs p { color: var(--text-dark); margin-bottom: 0.7rem; font-size: 0.9rem; }
-.tech-specs strong { color: var(--primary-color); }
+.tech-specs {
+  background-color: rgba(2, 138, 15, 0.1);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-md);
+}
+.specs-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.tech-specs p {
+  color: var(--text-dark);
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+}
+.tech-specs strong {
+  color: var(--primary-color);
+}
 
 /* --- FOOTER --- */
 footer.container {
@@ -442,9 +526,19 @@ footer.container {
   gap: 2rem;
 }
 
-footer .column .logo { max-width: 100px; margin-bottom: 2rem; }
-footer .column p { color: var(--text-dark); margin-bottom: 2rem; }
-footer .column .socials { display: flex; align-items: center; gap: 1rem; }
+footer .column .logo {
+  max-width: 100px;
+  margin-bottom: 2rem;
+}
+footer .column p {
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+footer .column .socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 footer .column .socials a {
   color: var(--text-dark);
   border: 1px solid var(--text-dark);
@@ -458,9 +552,20 @@ footer .column .socials a:hover {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
-footer .column h4 { margin-bottom: 2rem; font-size: 1.2rem; font-weight: 500; }
-footer .column > a { display: block; color: var(--text-dark); margin-bottom: 1rem; transition: var(--transition-speed); }
-footer .column > a:hover { color: var(--primary-color); }
+footer .column h4 {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+footer .column > a {
+  display: block;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  transition: var(--transition-speed);
+}
+footer .column > a:hover {
+  color: var(--primary-color);
+}
 
 .copyright {
   max-width: 1200px;
@@ -469,7 +574,10 @@ footer .column > a:hover { color: var(--primary-color); }
   font-size: 0.8rem;
   text-align: center;
 }
-.copyright .author-link { font-weight: bold; color: var(--primary-color); }
+.copyright .author-link {
+  font-weight: bold;
+  color: var(--primary-color);
+}
 
 /* --- ANIMATIONS --- */
 .hidden {
@@ -485,28 +593,441 @@ footer .column > a:hover { color: var(--primary-color); }
   transform: translateY(0);
 }
 
+/* --- OFERTA SECTION --- */
+.oferta-container {
+  margin: 2rem 0 2rem;
+}
+
+.oferta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+/* Columna de precios */
+.precio-destacado {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--primary-color);
+}
+
+.precio-antiguo {
+  display: block;
+  color: var(--text-dark);
+  text-decoration: line-through;
+  font-size: 1.2rem;
+}
+
+.precio-actual {
+  display: block;
+  color: var(--text-light);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.badge-oferta {
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  background-color: var(--hover-color);
+  color: white;
+  padding: 0.3rem 2rem;
+  transform: rotate(45deg);
+  font-size: 0.8rem;
+  width: 120px;
+  text-align: center;
+}
+
+.detalles-pago {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 2rem;
+}
+
+.detalles-pago h4 {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detalles-pago ul {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.detalles-pago li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.detalles-pago i {
+  color: var(--primary-color);
+  margin-top: 0.2rem;
+}
+
+.garantia {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.btn-grande {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+}
+
+/* --- PROYECTOS VIDEO --- */
+.proyectos-video {
+  margin-top: 3rem;
+}
+
+.proyectos-video h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.proyectos-video .video-wrapper {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.proyectos-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Makes video responsive */
+}
+
+/* ===== TESTIMONIOS - CARRUSEL DE IMÁGENES ===== */
+.testimonios-container {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 2rem;
+}
+
+.testimonios-container h3 {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+}
+
+/* Contenedor principal del carrusel */
+.testimonios-carrusel {
+  position: relative;
+  min-height: 500px; /* Ajusta según necesidad */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-card-hover);
+}
+
+/* Items del carrusel (imágenes) */
+.testimonio-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.testimonio-img.active {
+  opacity: 1;
+}
+
+.testimonio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Cambia a 'cover' si prefieres que llene el espacio */
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Controles de navegación */
+.controles-carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition-speed);
+  padding: 0.5rem;
+}
+
+.control-btn:hover {
+  transform: scale(1.1);
+  color: var(--hover-color);
+}
+
+/* Indicadores de puntos */
+.puntos {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.punto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--text-dark);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: var(--transition-speed);
+}
+
+.punto.activo {
+  opacity: 1;
+  background-color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+/* Reemplaza los estilos del carrusel de marcas con esto: */
+.marcas-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.marcas-carrusel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.marcas-container-inner {
+  display: flex;
+  transition: transform 0.8s ease;
+  width: 100%;
+}
+
+.marca-item {
+  flex: 0 0 25%; /* Por defecto muestra 4 (100%/4) */
+  padding: 0 15px;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+
+.marca-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.marca-item.next,
+.marca-item.prev {
+  opacity: 0.3;
+}
+
+.marca-marco {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(2, 138, 15, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.marca-marco img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Controles */
+.marcas-controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.marca-control {
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.marca-control:hover {
+  background: var(--hover-color);
+  transform: scale(1.1);
+}
+
+.marcas-puntos {
+  display: flex;
+  gap: 1rem;
+}
+
+.marcas-puntos .punto {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--text-dark);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.marcas-puntos .punto.activo {
+  opacity: 1;
+  background-color: var(--primary-color);
+  transform: scale(1.2);
+}
+
 /* --- MEDIA QUERIES --- */
 @media (width < 1024px) {
-  .nfc-container { flex-direction: column; }
-  .video-column { order: -1; }
-  .nfc-video-container { max-width: 600px; margin: 0 auto; }
-  .benefits-column { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .nfc-container {
+    flex-direction: column;
+  }
+  .video-column {
+    order: -1;
+  }
+  .nfc-video-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .benefits-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 }
 
 @media (width < 900px) {
-  .nav-links { display: none; }
-  header.container, .paquete-web-intro { grid-template-columns: 1fr; flex-direction: column; }
-  header .image { grid-area: 1/1/2/2; }
-  .servicios, .precios, .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-  .paquete-web-intro .video-container { width: 100%; order: -1; }
-  .features-grid { grid-template-columns: 1fr; }
-  footer.container { grid-template-columns: 1fr 200px; }
+  .nav-links {
+    display: none;
+  }
+  header.container,
+  .paquete-web-intro {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  header .image {
+    grid-area: 1/1/2/2;
+  }
+  .servicios,
+  .precios,
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .paquete-web-intro .video-container {
+    width: 100%;
+    order: -1;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  footer.container {
+    grid-template-columns: 1fr 200px;
+  }
+
+  /* === FIX: Stacks the offer grid on smaller screens === */
+  .oferta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonios-carrusel {
+    min-height: 400px;
+  }
+
+  .testimonio-img {
+    padding: 0.5rem;
+  }
+
+  .marca-item {
+    flex: 0 0 33.333%; /* Muestra 3 en tablet */
+  }
 }
 
 @media (width < 600px) {
-  header .image::before { display: none; }
-  .servicios, .precios, .benefits-grid, .benefits-column { grid-template-columns: 1fr; }
-  footer.container { grid-template-columns: 1fr 150px; }
-  .video-container iframe { height: 250px; }
-  .paquete-web-intro .header { font-size: 2rem; }
+  header .image::before {
+    display: none;
+  }
+  .servicios,
+  .precios,
+  .benefits-grid,
+  .benefits-column {
+    grid-template-columns: 1fr;
+  }
+  footer.container {
+    grid-template-columns: 1fr 150px;
+  }
+  .video-container iframe {
+    height: 250px;
+  }
+  .paquete-web-intro .header {
+    font-size: 2rem;
+  }
+
+  .testimonios-carrusel {
+    min-height: 350px;
+  }
+
+  .control-btn {
+    font-size: 1.2rem;
+  }
+
+  .punto {
+    width: 8px;
+    height: 8px;
+  }
+
+  .marca-item {
+    flex: 0 0 50%; /* Muestra 2 en móvil */
+  }
+}
+
+@media (max-width: 768px) {
+  .marcas-carrusel {
+    height: 150px;
+  }
+
+  .marca-control {
+    width: 35px;
+    height: 35px;
+  }
 }
