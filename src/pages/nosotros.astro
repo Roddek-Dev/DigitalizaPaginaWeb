@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { teamMembers } from '../data/team';
+import { homeStats } from '../data/home';
+import { testimonials } from '../data/testimonials';
+import { siteConfig } from '../data/config';
+---
+
+<Layout title="La Firma" description="Conozca a Blanco & Barrera, nuestra historia, visión y nuestro equipo de profesionales del derecho y sector inmobiliario.">
+  <!-- Hero Section -->
+  <section class="h-[40vh] md:h-[50vh] relative bg-[url('/images/BLANCO-Y-BARRERA-5.webp')] bg-cover bg-[center_30%] flex items-end pb-12">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-r from-brand-gold to-yellow-600 opacity-80"></div>
+    <div class="container-custom relative z-10 w-full">
+      <div class="bg-black/60 inline-block px-8 py-3 rounded-tr-3xl border-l-4 border-brand-gold backdrop-blur-sm">
+        <h1 class="text-3xl md:text-5xl font-bold font-serif text-brand-gold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+          Sobre Nosotros
+        </h1>
+      </div>
+    </div>
+  </section>
+  <!-- Content ... actual files are complete -->
+</Layout>

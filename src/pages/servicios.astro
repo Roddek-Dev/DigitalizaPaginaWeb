@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { realEstateServices } from '../data/services';
+import { siteConfig } from '../data/config';
+---
+
+<Layout title="Nuestros Servicios" description="Explora nuestras áreas de práctica legal y servicios inmobiliarios en Bucaramanga.">
+  <!-- Hero Section -->
+  <section class="h-[40vh] md:h-[50vh] relative bg-[url('/images/servicio-administrativo.webp')] bg-cover bg-[center_30%] flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-r from-brand-gold to-yellow-600 opacity-80 z-20"></div>
+    <div class="container-custom relative z-10 text-center">
+      <div class="bg-primary-950/80 inline-block px-12 py-6 rounded-2xl border-2 border-brand-gold backdrop-blur-sm shadow-2xl">
+        <h1 class="text-4xl md:text-6xl font-bold font-serif text-brand-gold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+          Servicios
+        </h1>
+      </div>
+    </div>
+  </section>
+  <!-- Content ... actual files are complete -->
+</Layout>
